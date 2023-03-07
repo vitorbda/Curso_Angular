@@ -12,13 +12,14 @@ export class TodoListComponent implements OnInit{
 
   constructor(){}
 
-  public taskList: Array<TaskList> = [
-    {task: "Minha task 1", checked: true},
-    {task: "minha task 2", checked: false}
-  ];
+  public taskList: Array<TaskList> = [];
 
   public deleteItemTaskLsit(event: number){
     this.taskList.splice(event, 1);
+  }
+
+  public setEmitTaskList(event: string){
+    this.taskList.push({task: event, checked: false});
   }
 
   public deleteAll(){
