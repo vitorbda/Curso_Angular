@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `     
   
-  <app-food-list>
+  <app-add-list> </app-add-list>
+  <app-food-list>  </app-food-list>
 
   <router-outlet></router-outlet>          
   `

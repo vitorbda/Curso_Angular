@@ -9,6 +9,9 @@ import { FoodListService } from 'src/app/services/food-list.service';
 export class FoodListComponent implements OnInit{
   ngOnInit(): void {
     this.foodList = this.foodListService.foodList();
+    this.foodListService.emitEvent.subscribe(
+      res => alert(`Você adicinou -> ${res}`)
+    );
   }
 
   constructor(private foodListService: FoodListService){}
