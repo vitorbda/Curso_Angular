@@ -15,12 +15,15 @@ export class FoodListComponent implements OnInit{
     );
     
     this.foodListService.emitEvent.subscribe(
-      res => alert(`Você adicinou -> ${res}`)
+      res => {
+        alert(`Você adicinou -> ${res.nome}`);
+        return this.foodList.push(res);
+      }
     );
   }
 
   constructor(private foodListService: FoodListService){}
 
-  public foodList: FoodList | any;
+  public foodList: Array<FoodList> = [];
 
 }
