@@ -6,6 +6,7 @@ import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { AddListComponent } from './add-list/add-list.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -26,7 +27,8 @@ import { AddListComponent } from './add-list/add-list.component';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
