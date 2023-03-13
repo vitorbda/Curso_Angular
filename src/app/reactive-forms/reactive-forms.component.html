@@ -1,0 +1,33 @@
+
+<style>
+    form {
+        margin-top: 50px;
+        margin-left: 50px;;
+    }
+
+    .alert {
+        color: red;
+    }
+</style>
+
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+    <input type="text" formControlName="firstName">
+    <span class="alert" *ngIf=" cadastroForm.get('firstName')?.errors 
+                            && (cadastroForm.get('firstName')?.touched ||
+                                cadastroForm.get('firstName')?.dirty)">
+        ta errado
+    </span>
+    <br><br>
+
+    <input type="text" formControlName="lastName">
+    <span class="alert">
+    </span>
+    <br><br>
+
+    <p>
+        {{ cadastroForm.get('lastName')?.errors | json }}
+    </p>
+
+
+    <button [disabled]="cadastroForm.invalid">Enviar dados</button>
+</form>

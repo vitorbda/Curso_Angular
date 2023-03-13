@@ -15,6 +15,8 @@ import { TodoButtonDeleteAllComponent } from './modules/home/components/todo-but
 import { TodoInputAddItensComponent } from './modules/home/components/todo-input-add-itens/todo-input-add-itens.component';
 import { TodoListComponent } from './modules/home/components/todo-list/todo-list.component';
 import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { FormsComponent } from './forms/forms.component';
     TodoButtonDeleteAllComponent,
     TodoInputAddItensComponent,
     TodoListComponent,
-    FormsComponent
+    FormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
