@@ -14,6 +14,7 @@ import { HeaderComponent } from './modules/home/components/header/header.compone
 import { TodoButtonDeleteAllComponent } from './modules/home/components/todo-button-delete-all/todo-button-delete-all.component';
 import { TodoInputAddItensComponent } from './modules/home/components/todo-input-add-itens/todo-input-add-itens.component';
 import { TodoListComponent } from './modules/home/components/todo-list/todo-list.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TodoListComponent } from './modules/home/components/todo-list/todo-list
     HeaderComponent,
     TodoButtonDeleteAllComponent,
     TodoInputAddItensComponent,
-    TodoListComponent
+    TodoListComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,

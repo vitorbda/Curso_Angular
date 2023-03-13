@@ -3,10 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `     
-  
-  <app-add-list> </app-add-list>
-  <app-food-list>  </app-food-list>
-
+  <app-forms></app-forms>
   <router-outlet></router-outlet>          
   `
 })
